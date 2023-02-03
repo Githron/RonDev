@@ -24,7 +24,6 @@
 body {
     background-color: hsl(210, 60%, 98%);
     min-height: 100vh;
-    display: flex;
 }
 
 .notification {
@@ -43,6 +42,7 @@ body {
 }
 
 .notifTitle {
+    color: var(--verydarkblue);
     font-weight: 800;
     font-size: 20px;
 }
@@ -50,6 +50,9 @@ body {
 .notifMark {
     color: var(--darkgrayishblue);
     font-weight: 550;
+}
+.notifMark:hover {
+    color: var(--Blue);
 }
 
 .notifTitle span {
@@ -68,7 +71,9 @@ body {
 }
 
 .box1:nth-child(5),
-.box1:nth-child(6) {
+.box1:nth-child(6),
+.box1:nth-child(7),
+.box1:nth-child(8) {
     background-color: white;
 }
 
@@ -78,7 +83,8 @@ body {
     margin: 1rem;
 }
 
-.box1 p {
+.box1 div {
+    display: block;
     font-family: "Plus Jakarta Sans", sans-serif;
     color: var(--darkgrayishblue);
     font-weight: 450;
@@ -92,11 +98,17 @@ body {
     font-weight: 800;
     padding-right: 5px;
 }
+.name:hover {
+    color: var(--Blue);
+}
 
 .ptitle {
     color: var(--darkgrayishblue);
     font-weight: 700;
     padding-left: 5px;
+}
+.ptitle:hover {
+    color: var(--Blue);
 }
 
 .ptitle2 {
@@ -104,13 +116,44 @@ body {
     font-weight: 700;
     padding-left: 5px;
 }
+.ptitle2:hover {
+    color: var(--Blue);
+}
 
 .time {
     color: var(--grayishblue);
+    margin: 0;
 }
 
 .par {
+    margin-top: 3px;
     border: 1px solid hsl(205, 33%, 90%);
     border-radius: 5px;
     padding: 1rem;
+}
+
+.par:hover {
+    background-color: var(--lightgrayishblue1);
+}
+
+.imgNote {
+    margin-left: 500px;
+}
+
+.dot {
+    display: inline-block;
+    margin-bottom: 1px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+@media (min-width: 720px) {
+    body {
+        display: flex;
+    }
+    .notification {
+        margin: auto;
+    }
 }
