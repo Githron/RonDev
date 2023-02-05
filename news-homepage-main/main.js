@@ -4,19 +4,22 @@ $(document).ready(function () {
         if ($(".menuBox").hasClass("open")) {
             $(".menuBox").css("opacity", "0");
             $(".menuBox").removeClass("open");
+
+            $(".body2").removeClass("open");
             setTimeout(function () {
                 $(".menuBox").css("display", "none");
-            }, 500);
+            }, 1000);
         } else {
             $(".menuBox").css("display", "block");
             $(".menuBox").animate(
                 {
                     opacity: 1,
                 },
-                500,
+                1000,
                 "linear"
             );
             $(".menuBox").addClass("open");
+            $(".body2").addClass("open");
         }
     });
 });
