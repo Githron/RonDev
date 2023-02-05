@@ -349,7 +349,7 @@ main {
         height: 100%;
         justify-content: space-between;
         flex-direction: column;
-        margin-top: 0.35rem;
+        margin-top: 0rem;
         margin-left: 1.5rem;
     }
     .headImg {
@@ -369,7 +369,7 @@ main {
         justify-content: space-between;
         max-width: 1080px;
         margin: auto;
-        aspect-ratio: 100/40;
+        aspect-ratio: 100/40.5;
     }
 
     .body2 {
@@ -385,6 +385,10 @@ main {
     }
     .botContent {
         flex: 1;
+    }
+
+    .botImg {
+        margin-right: 0.85rem;
     }
 
     .menu,
