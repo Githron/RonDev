@@ -1,10 +1,10 @@
 //THIS IS JQUERY div id = link anchor hrrf function
 $(document).ready(function () {
-    $("#index1").click(function () {
+    $("#index1, #stepBackTo1").click(function () {
         window.location.href = "index1.html";
     });
 
-    $("#index2").click(function () {
+    $("#index2, #stepTo2").click(function () {
         window.location.href = "index2.html";
     });
 });

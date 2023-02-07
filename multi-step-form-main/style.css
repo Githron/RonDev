@@ -69,10 +69,15 @@ body {
     border: 1px solid var(--Lightgray);
     margin-right: 1rem;
     border-radius: 50%;
-    background-color: var(--Lightblue);
+    /* background-color: var(--Lightblue); */
     font-weight: 500;
 }
 
+#currentStep {
+    background-color: var(--Lightblue);
+    color: var(--Marineblue);
+}
+.stepContainer:nth-child(1) .one,
 .stepContainer:nth-child(2) .one,
 .stepContainer:nth-child(3) .one,
 .stepContainer:nth-child(4) .one {
