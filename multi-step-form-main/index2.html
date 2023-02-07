@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Frontend Mentor | Multi-step form</title>
+    <script src="app.js" defer></script>
+
+</head>
+
+<body id="target-container">
+    <div class="container">
+        <div class="bgSidebar">
+
+            <div class="stepaNav">
+                <div id="index1" class="stepContainer">
+                    <span class="one">1</span>
+                    <div class="stepOne">STEP 1 <br><span>Your info</span></div>
+                </div>
+
+                <div class="stepContainer">
+                    <span class="one">2</span>
+                    <div class="stepOne">STEP 2 <br><span>Select plan</span></div>
+                </div>
+
+                <div class="stepContainer">
+                    <span class="one">3</span>
+                    <div class="stepOne">STEP 3 <br><span>Add-ons</span></div>
+                </div>
+
+                <div class="stepContainer">
+                    <span class="one">4</span>
+                    <div class="stepOne">STEP 4 <br><span>Summary</span></div>
+                </div>
+
+            </div>
+
+            <img id="tImgX" src="assets/images/bg-sidebar-desktop.svg" alt="">
+
+
+
+        </div>
+
+
+
+        <div class="dataInfo">
+
+            <div class="mobileContainer">
+
+                <div class="dataInfoContent">
+                    <h1>Select your plan </h1>
+                    <p>You have the option of monthly or yearly billing.</p>
+                </div>
+
+                <div class="planBoxflexContainer">
+
+                    <div class="planBox">
+                        <div class="planImg">
+                            <img src="assets/images/icon-arcade.svg" alt="">
+                        </div>
+                        <div class="planImgText">
+                            <p>Arcade</p>
+                            <span>$9/mo</span>
+                        </div>
+                    </div>
+
+                    <div class="planBox">
+                        <div class="planImg">
+                            <img src="assets/images/icon-advanced.svg" alt="">
+                        </div>
+                        <div class="planImgText">
+                            <p>Advanced</p>
+                            <span>$12/mo</span>
+                        </div>
+                    </div>
+
+                    <div class="planBox">
+                        <div class="planImg">
+                            <img src="assets/images/icon-pro.svg" alt="">
+                        </div>
+                        <div class="planImgText">
+                            <p>Pro</p>
+                            <span>$15/mo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggleMthYr">
+                    <p class="p1">Monthly<label class="switch">
+                            <input type="checkbox" id="checkbox">
+
+                            <span class="slider round"></span>
+                        </label><span class="p2">Yearly</span></p>
+                </div>
+
+            </div>
+
+            <div id="element-to-move" class="buttonContainer">
+                <button class="goBack">Go Back</button>
+                <button>Next Step</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+
+</body>
+
+
+
+</html>
