@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+    <title>Frontend Mentor | Multi-step form</title>
+    <script src="app.js" defer></script>
+
+</head>
+
+<body id="target-container">
+    <div class="container">
+        <div class="bgSidebar">
+
+            <div class="stepaNav">
+                <div id="index1" class="stepContainer">
+                    <span class="one">1</span>
+                    <div class="stepOne">STEP 1 <br><span>Your info</span></div>
+                </div>
+
+                <div id="index2" class="stepContainer">
+                    <span class="one">2</span>
+                    <div class="stepOne">STEP 2 <br><span>Select plan</span></div>
+                </div>
+
+                <div id="index3" class="stepContainer">
+                    <span class="one">3</span>
+                    <div class="stepOne">STEP 3 <br><span>Add-ons</span></div>
+                </div>
+
+                <div class="stepContainer">
+                    <span id="currentStep" class="one">4</span>
+                    <div class="stepOne">STEP 4 <br><span>Summary</span></div>
+                </div>
+
+            </div>
+
+            <img id="tImgX" src="assets/images/bg-sidebar-desktop.svg" alt="">
+
+
+
+        </div>
+
+
+
+        <div class="dataInfo">
+
+            <div class="mobileContainer">
+
+                <div class="dataInfoContent">
+                    <h1>Finishing up</h1>
+                    <p>Double-check everything looks OK before confirming.</p>
+                </div>
+
+                <div class="addOnFlexContainer4">
+
+                    <div class="addOnBox4">
+                        <div class="leftText4">
+                            <p class="p1Index4">Arcade (Monthly)</p>
+                            <p class="p2Index4">Change</p>
+                        </div>
+
+                        <div class="rightText4">
+                            <p class="p3Index4">$9/mo</p>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="addOnBox4">
+                        <div class="leftText4">
+                            <p class="p5Index4">Online Service</p>
+                            <p class="p6Index4">Larger Storage</p>
+                        </div>
+
+                        <div class="rightText4">
+                            <p class="p5Index4">$1/mo</p>
+                            <p class="p6Index4">$2/mo</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="total">
+                    <div class="totalText">Total (per month</div>
+                    <div class="totalNumber">+$12/mo</div>
+                </div>
+
+
+                <div id="element-to-move" class="buttonContainer">
+                    <button id="stepTo3" class="goBack">Go Back</button>
+                    <button>Confirm</button>
+                </div>
+
+            </div>
+
+        </div>
+
+</body>
+
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+</html>

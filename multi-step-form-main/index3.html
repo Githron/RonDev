@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+    <title>Frontend Mentor | Multi-step form</title>
+    <script src="app.js" defer></script>
+
+</head>
+
+<body id="target-container">
+    <div class="container">
+        <div class="bgSidebar">
+
+            <div class="stepaNav">
+                <div id="index1" class="stepContainer">
+                    <span class="one">1</span>
+                    <div class="stepOne">STEP 1 <br><span>Your info</span></div>
+                </div>
+
+                <div id="index2" class="stepContainer">
+                    <span class="one">2</span>
+                    <div class="stepOne">STEP 2 <br><span>Select plan</span></div>
+                </div>
+
+                <div class="stepContainer">
+                    <span id="currentStep" class="one">3</span>
+                    <div class="stepOne">STEP 3 <br><span>Add-ons</span></div>
+                </div>
+
+                <div id="index4" class="stepContainer">
+                    <span class="one">4</span>
+                    <div class="stepOne">STEP 4 <br><span>Summary</span></div>
+                </div>
+
+            </div>
+
+            <img id="tImgX" src="assets/images/bg-sidebar-desktop.svg" alt="">
+
+
+
+        </div>
+
+
+
+        <div class="dataInfo">
+
+            <div class="mobileContainer">
+
+                <div class="dataInfoContent">
+                    <h1>Pick add-ons </h1>
+                    <p>Add-ons help enhance your gaming experience.</p>
+                </div>
+
+                <div class="addOnFlexContainer">
+
+                    <div class="addOnBox1">
+                        <input class="addOnCheckbox" type="checkbox" id="newsletter" name="newsletter" value="yes">
+
+
+                        <div class="textDateBox">
+                            <div class="addOntextBox">
+                                <p class="addOntext1">Online service</p>
+                                <p class="addOntext2">Access to multiplayer games</p>
+                            </div>
+                            <div class="addOndate">
+                                +$1/mo
+                            </div>
+                        </div>
+
+
+                        </input>
+
+                    </div>
+
+                    <div class="addOnBox1">
+                        <input class="addOnCheckbox" type="checkbox" id="newsletter" name="newsletter" value="yes">
+
+                        <div class="textDateBox">
+                            <div class="addOntextBox">
+                                <p class="addOntext1">Larger storage</p>
+                                <p class="addOntext2">Extra 1TB of cloud save</p>
+                            </div>
+                            <div class="addOndate">
+                                +$2/mo
+                            </div>
+                        </div>
+
+
+                        </input>
+
+                    </div>
+
+                    <div class="addOnBox1">
+                        <input class="addOnCheckbox" type="checkbox" id="newsletter" name="newsletter" value="yes">
+
+
+                        <div class="textDateBox">
+                            <div class="addOntextBox">
+                                <p class="addOntext1">Customizable Profile</p>
+                                <p class="addOntext2">Custom theme on your profile</p>
+                            </div>
+                            <div class="addOndate">
+                                +$2/mo
+                            </div>
+                        </div>
+
+
+                        </input>
+
+                    </div>
+
+                </div>
+
+                <div id="element-to-move" class="buttonContainer">
+                    <button id="stepTo2" class="goBack">Go Back</button>
+                    <button id="stepTo4">Next Step</button>
+                </div>
+
+            </div>
+
+        </div>
+
+</body>
+
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+</html>

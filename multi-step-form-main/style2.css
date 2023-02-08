@@ -16,6 +16,11 @@ body {
     min-height: 100vh;
 }
 
+/* initial state */
+.free2mnths {
+    display: none;
+}
+
 .planBoxflexContainer {
     display: flex;
     width: 70%;
@@ -27,10 +32,16 @@ body {
 .planBox {
     flex: 1;
     background-color: rgb(255, 255, 255);
-    border: 2px solid rgb(151, 56, 223);
+    border: 2px solid var(--Coolgray);
     border-radius: 10px;
     padding: 1.2rem;
+    cursor: pointer;
 }
+
+/* .planBox:active {
+    border: 2px solid rgb(151, 56, 223);
+    cursor: pointer;
+} */
 
 .planImg {
     width: 60px;
@@ -82,6 +93,11 @@ body {
 
     margin: 0 10px;
     margin-bottom: 3px;
+
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -ms-user-select: none; /* IE10+ */
+    user-select: none; /* Standard syntax */
 }
 
 .switch input {
@@ -153,6 +169,14 @@ input:checked + .slider:before {
 
     .planImgText p {
         margin-bottom: 0.3rem;
+    }
+
+    .toggleMthYr {
+        width: 100%;
+    }
+
+    .switch {
+        margin: 0 2rem;
     }
 
     .mobileContainer {
