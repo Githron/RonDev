@@ -35,11 +35,17 @@
     justify-content: space-between;
 }
 
-.totalText,
-.totalNumber {
+.totalText {
     color: var(--Coolgray);
     margin: 0 2rem;
     margin-top: 0.5rem;
+}
+
+.totalNumber {
+    color: var(--Purplishblue);
+    margin: 0 2rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
 }
 
 .addOnBox4 {
@@ -68,6 +74,7 @@ hr {
 .p2Index4 {
     color: var(--Marineblue);
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .p2Index4:hover {
@@ -89,6 +96,11 @@ hr {
     margin-top: 5px;
 }
 
+.p7Index4 {
+    color: var(--Coolgray);
+    margin-top: 5px;
+}
+
 @media (max-width: 830px) {
     .addOnFlexContainer4 {
         width: 100%;
@@ -104,9 +116,14 @@ hr {
         width: 100%;
     }
 
-    .totalText,
-    .totalNumber {
+    .totalText {
         color: var(--Coolgray);
+        margin: 0 1rem;
+        margin-top: 1rem;
+    }
+
+    .totalNumber {
+        color: var(--Purplishblue);
         margin: 0 1rem;
         margin-top: 1rem;
     }

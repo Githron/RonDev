@@ -133,6 +133,28 @@ form {
 label {
     color: var(--Marineblue);
     font-size: 1rem;
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.nCheckEmpty {
+    position: absolute;
+    right: 0;
+    color: red;
+    display: none;
+}
+.eaCheckEmpty {
+    position: absolute;
+    right: 0;
+    color: red;
+    display: none;
+}
+.pnCheckEmpty {
+    position: absolute;
+    right: 0;
+    color: red;
+    display: none;
 }
 
 .inputIndex1 {
@@ -182,6 +204,7 @@ button {
     border-radius: 8px;
     border: solid #10498c;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .goBack {
