@@ -132,6 +132,7 @@ $(document).ready(function () {
             return false;
         } else {
             $(".pnCheckEmpty").hide();
+            alert("now you are hacked! ;)");
             window.location.href = "index2.html";
         }
 
