@@ -87,18 +87,18 @@ hr {
 }
 
 .p5Index4 {
-    margin-bottom: 5px;
+    margin: 10px 0;
     color: var(--Coolgray);
 }
 
 .p6Index4 {
     color: var(--Coolgray);
-    margin-top: 5px;
+    margin: 10px 0;
 }
 
 .p7Index4 {
     color: var(--Coolgray);
-    margin-top: 5px;
+    margin: 10px 0;
 }
 
 @media (max-width: 830px) {

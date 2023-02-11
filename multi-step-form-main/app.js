@@ -44,6 +44,8 @@ $(document).ready(function () {
         // Check if the input value matches the format of a name
         if (/^[a-zA-Z ]+$/.test(inputValue)) {
             console.log("Input is a name.");
+            $(".nCheckEmpty").css("display", "none");
+            $("#name").css("border", "2px solid var(--Lightgray)"); // border: 1px solid var(--Lightgray);
         } else {
             console.log("Input is not a name.");
             $(".nCheckEmpty").css("display", "block");
@@ -64,6 +66,8 @@ $(document).ready(function () {
             )
         ) {
             console.log("Input is a email.");
+            $(".eaCheckEmpty").css("display", "none");
+            $("#email").css("border", "2px solid var(--Lightgray)");
         } else {
             console.log("Input is not a email.");
             $(".eaCheckEmpty").css("display", "block");
@@ -80,6 +84,8 @@ $(document).ready(function () {
         // Check if the input value matches the format of a name
         if (/^\+?[0-9]+$/.test(inputValue)) {
             console.log("Input is a number.");
+            $(".pnCheckEmpty").css("display", "none");
+            $("#number").css("border", "2px solid var(--Lightgray)");
         } else {
             console.log("Input is not a number.");
             $(".pnCheckEmpty").css("display", "block");
@@ -284,6 +290,16 @@ $(document).ready(function () {
             $(".p1Index4").text("Arcade (Yearly)");
             $(".p3Index4").text(selectedPrice);
             console.log(selectedPrice);
+        } else if (selectedPrice === "$120/yr") {
+            selectedPrice = $(".advancedPrice").text();
+            $(".p1Index4").text("Advanced (Yearly)");
+            $(".p3Index4").text(selectedPrice);
+            console.log(selectedPrice);
+        } else if (selectedPrice === "$150/yr") {
+            selectedPrice = $(".proPrice").text();
+            $(".p1Index4").text("Pro (Yearly)");
+            $(".p3Index4").text(selectedPrice);
+            console.log(selectedPrice);
         }
     } else {
         $("input#checkbox").prop("checked", false);
@@ -297,6 +313,16 @@ $(document).ready(function () {
         if (selectedPrice === "$90/yr") {
             selectedPrice = $(".arcadePrice").text();
             $(".p1Index4").text("Arcade (Monthly)");
+            $(".p3Index4").text(selectedPrice);
+            console.log(selectedPrice);
+        } else if (selectedPrice === "$120/yr") {
+            selectedPrice = $(".advancedPrice").text();
+            $(".p1Index4").text("Advanced (Monthly)");
+            $(".p3Index4").text(selectedPrice);
+            console.log(selectedPrice);
+        } else if (selectedPrice === "$150/yr") {
+            selectedPrice = $(".proPrice").text();
+            $(".p1Index4").text("Pro (Monthly)");
             $(".p3Index4").text(selectedPrice);
             console.log(selectedPrice);
         }
@@ -321,6 +347,18 @@ $(document).ready(function () {
                 $(".p3Index4").text("$90/yr");
                 console.log("$90/yr");
                 localStorage.setItem("selectedPrice", selectedPrice);
+            } else if (selectedPrice === "$12/mo") {
+                selectedPrice = $(".advancedPrice").text();
+                $(".p1Index4").text("Advanced (Yearly)");
+                $(".p3Index4").text(selectedPrice);
+                console.log(selectedPrice);
+                localStorage.setItem("selectedPrice", selectedPrice);
+            } else if (selectedPrice === "$15/mo") {
+                selectedPrice = $(".proPrice").text();
+                $(".p1Index4").text("Pro (Yearly)");
+                $(".p3Index4").text(selectedPrice);
+                console.log(selectedPrice);
+                localStorage.setItem("selectedPrice", selectedPrice);
             }
         } else {
             // console.log(selectedPrice);
@@ -338,11 +376,24 @@ $(document).ready(function () {
                 $(".p3Index4").text("$9/mo");
                 console.log("$9/moX");
                 localStorage.setItem("selectedPrice", selectedPrice);
+            } else if (selectedPrice === "$120/yr") {
+                selectedPrice = $(".advancedPrice").text();
+                $(".p1Index4").text("Advanced (Monthly)");
+                $(".p3Index4").text(selectedPrice);
+                console.log(selectedPrice);
+                localStorage.setItem("selectedPrice", selectedPrice);
+            } else if (selectedPrice === "$150/yr") {
+                selectedPrice = $(".proPrice").text();
+                $(".p1Index4").text("Pro (Monthly)");
+                $(".p3Index4").text(selectedPrice);
+                console.log(selectedPrice);
+                localStorage.setItem("selectedPrice", selectedPrice);
             }
         }
     });
 });
 
+//
 $("input#checkbox").click(function () {
     var selectedPrice = localStorage.getItem("selectedPrice");
 
@@ -354,6 +405,18 @@ $("input#checkbox").click(function () {
             $(".p3Index4").text("$9/mo");
             console.log("$9/moY");
             localStorage.setItem("selectedPrice", selectedPrice);
+        } else if (selectedPrice === "$120/yr") {
+            selectedPrice = $(".advancedPrice").text();
+            $(".p1Index4").text("Advanced (Yearly)");
+            $(".p3Index4").text("$12/mo");
+            console.log("$12/moY");
+            localStorage.setItem("selectedPrice", selectedPrice);
+        } else if (selectedPrice === "$150/yr") {
+            selectedPrice = $(".proPrice").text();
+            $(".p1Index4").text("Pro (Yearly)");
+            $(".p3Index4").text("$15/mo");
+            console.log("$15/moY");
+            localStorage.setItem("selectedPrice", selectedPrice);
         }
     } else {
         // console.log(selectedPrice);
@@ -363,9 +426,45 @@ $("input#checkbox").click(function () {
             $(".p3Index4").text("$90/yr");
             console.log("$90/yrY");
             localStorage.setItem("selectedPrice", selectedPrice);
+        } else if (selectedPrice === "$12/mo") {
+            selectedPrice = $(".advancedPrice").text();
+            $(".p1Index4").text("Advanced (Monthly)");
+            $(".p3Index4").text("$120/yr");
+            console.log("$120/yrY");
+            localStorage.setItem("selectedPrice", selectedPrice);
+        } else if (selectedPrice === "$15/mo") {
+            selectedPrice = $(".proPrice").text();
+            $(".p1Index4").text("Pro (Monthly)");
+            $(".p3Index4").text("$150/yr");
+            console.log("$150/yrY");
+            localStorage.setItem("selectedPrice", selectedPrice);
         }
     }
 });
+
+// $("input#checkbox").click(function () {
+//     var selectedPrice = localStorage.getItem("selectedPrice");
+
+//     if (!$(this).is(":checked")) {
+//         // console.log(selectedPrice)
+//         if (selectedPrice === "$120/yr") {
+//             selectedPrice = $(".advancedPrice").text();
+//             $(".p1Index4").text("Advanced (Yearly)");
+//             $(".p3Index4").text("$12/mo");
+//             console.log("$12/moY");
+//             localStorage.setItem("selectedPrice", selectedPrice);
+//         }
+//     } else {
+//         // console.log(selectedPrice);
+//         if (selectedPrice === "$12/mo") {
+//             selectedPrice = $(".advancedPrice").text();
+//             $(".p1Index4").text("Advanced (Monthly)");
+//             $(".p3Index4").text("$120/yr");
+//             console.log("$120/yrY");
+//             localStorage.setItem("selectedPrice", selectedPrice);
+//         }
+//     }
+// });
 
 // index 3 onlineService
 $(document).ready(function () {
@@ -375,6 +474,7 @@ $(document).ready(function () {
     if (onlineService === "checked") {
         $("#onlineService").prop("checked", true);
         localStorage.setItem("onlineService", "checked");
+        $(".p5Index4").css("display", "block");
         if (checkboxState === "checked") {
             $("#p5Index4").text("+$10/yr");
         } else {
@@ -383,11 +483,13 @@ $(document).ready(function () {
     } else {
         $("#onlineService").prop("checked", false);
         localStorage.setItem("onlineService", "unchecked");
+        $(".p5Index4").css("display", "none");
     }
 
     $("#onlineService").click(function () {
         var checkboxState = localStorage.getItem("checkboxState");
         if ($(this).is(":checked")) {
+            $(".p5Index4").css("display", "block");
             localStorage.setItem("onlineService", "checked");
             if (checkboxState === "checked") {
                 $("#p5Index4").text("+$10/yr");
@@ -396,6 +498,7 @@ $(document).ready(function () {
             }
         } else {
             localStorage.setItem("onlineService", "unchecked");
+            $(".p5Index4").css("display", "none");
         }
     });
 });
@@ -408,6 +511,7 @@ $(document).ready(function () {
     if (largerStorage === "checked") {
         $("#largerStorage").prop("checked", true);
         localStorage.setItem("largerStorage", "checked");
+        $(".p6Index4").css("display", "block");
         if (checkboxState === "checked") {
             $("#p6Index4").text("+$20/yr");
         } else {
@@ -416,11 +520,13 @@ $(document).ready(function () {
     } else {
         $("#largerStorage").prop("checked", false);
         localStorage.setItem("largerStorage", "unchecked");
+        $(".p6Index4").css("display", "none");
     }
 
     $("#largerStorage").click(function () {
         var checkboxState = localStorage.getItem("checkboxState");
         if ($(this).is(":checked")) {
+            $(".p6Index4").css("display", "block");
             localStorage.setItem("largerStorage", "checked");
             if (checkboxState === "checked") {
                 $("#p6Index4").text("+$20/yr");
@@ -429,6 +535,7 @@ $(document).ready(function () {
             }
         } else {
             localStorage.setItem("largerStorage", "unchecked");
+            $(".p6Index4").css("display", "none");
         }
     });
 });
@@ -441,6 +548,7 @@ $(document).ready(function () {
     if (customizableProfile === "checked") {
         $("#customizableProfile").prop("checked", true);
         localStorage.setItem("customizableProfile", "checked");
+        $(".p7Index4").css("display", "block");
         if (checkboxState === "checked") {
             $("#p7Index4").text("+$20/yr");
         } else {
@@ -449,11 +557,13 @@ $(document).ready(function () {
     } else {
         $("#customizableProfile").prop("checked", false);
         localStorage.setItem("customizableProfile", "unchecked");
+        $(".p7Index4").css("display", "none");
     }
 
     $("#customizableProfile").click(function () {
         var checkboxState = localStorage.getItem("checkboxState");
         if ($(this).is(":checked")) {
+            $(".p7Index4").css("display", "block");
             localStorage.setItem("customizableProfile", "checked");
             if (checkboxState === "checked") {
                 $("#p7Index4").text("+$20/yr");
@@ -462,6 +572,7 @@ $(document).ready(function () {
             }
         } else {
             localStorage.setItem("customizableProfile", "unchecked");
+            $(".p7Index4").css("display", "none");
         }
     });
 });
