@@ -95,27 +95,90 @@ $(document).ready(function () {
 });
 //
 
+///
+// $(document).ready(function () {
+//     // hide all the error messages initially
+//     // $(".nCheckEmpty").hide();
+//     // $(".eaCheckEmpty").hide();
+//     // $(".pnCheckEmpty").hide();
+
+//     $("#stepTo2").click(function () {
+//         // check if the name field is not empty
+//         // if ($("#name").val() === "") {
+//         //     $(".nCheckEmpty").show();
+//         //     return false;
+//         // } else {
+//         //     $(".nCheckEmpty").hide();
+//         // }
+
+//         // check if the name field is not empty and if the value is a valid name
+//         if ($("#name").val() === "" || !isValidName($("#name").val())) {
+//             $(".nCheckEmpty").show();
+//             return false;
+//         } else {
+//             $(".nCheckEmpty").hide();
+//         }
+
+//         // check if the email field is not empty and if the value is a valid email
+//         if (
+//             $("#email").val() === "" ||
+//             !isValidEmailAddress($("#email").val())
+//         ) {
+//             $(".eaCheckEmpty").show();
+//             return false;
+//         } else {
+//             $(".eaCheckEmpty").hide();
+//         }
+
+//         // check if the phone number field is not empty and if the value is a valid phone number
+//         if (
+//             $("#number").val() === "" ||
+//             !isValidPhoneNumber($("#number").val())
+//         ) {
+//             $(".pnCheckEmpty").show();
+//             return false;
+//         } else {
+//             $(".pnCheckEmpty").hide();
+//             alert("now you are hacked! ;)");
+//             window.location.href = "index2.html";
+//         }
+
+//         // if all the fields are valid, then submit the form or do your desired action here
+//         // ...
+//     });
+
+//     function isValidName(name) {
+//         // your name validation code here
+//         var pattern = /^[a-zA-Z ]+$/;
+//         return pattern.test(name);
+//     }
+
+//     function isValidEmailAddress(email) {
+//         // your email validation code here
+//         var pattern =
+//             /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+//         return pattern.test(email);
+//     }
+
+//     function isValidPhoneNumber(phoneNumber) {
+//         // your phone number validation code here
+//         var pattern = /^\+?[0-9]+$/;
+//         return pattern.test(phoneNumber);
+//     }
+// });
+
+// perfect !
 $(document).ready(function () {
     // hide all the error messages initially
-    // $(".nCheckEmpty").hide();
-    // $(".eaCheckEmpty").hide();
-    // $(".pnCheckEmpty").hide();
+    $(".error").hide();
 
     $("#stepTo2").click(function () {
-        // check if the name field is not empty
-        if ($("#name").val() === "") {
-            $(".nCheckEmpty").show();
-            return false;
-        } else {
-            $(".nCheckEmpty").hide();
-        }
+        let isFormValid = true;
 
         // check if the name field is not empty and if the value is a valid name
         if ($("#name").val() === "" || !isValidName($("#name").val())) {
             $(".nCheckEmpty").show();
-            return false;
-        } else {
-            $(".nCheckEmpty").hide();
+            isFormValid = false;
         }
 
         // check if the email field is not empty and if the value is a valid email
@@ -124,9 +187,7 @@ $(document).ready(function () {
             !isValidEmailAddress($("#email").val())
         ) {
             $(".eaCheckEmpty").show();
-            return false;
-        } else {
-            $(".eaCheckEmpty").hide();
+            isFormValid = false;
         }
 
         // check if the phone number field is not empty and if the value is a valid phone number
@@ -135,15 +196,15 @@ $(document).ready(function () {
             !isValidPhoneNumber($("#number").val())
         ) {
             $(".pnCheckEmpty").show();
-            return false;
-        } else {
-            $(".pnCheckEmpty").hide();
+            isFormValid = false;
+        }
+
+        if (isFormValid) {
+            // hide all error messages
+            $(".error").hide();
             alert("now you are hacked! ;)");
             window.location.href = "index2.html";
         }
-
-        // if all the fields are valid, then submit the form or do your desired action here
-        // ...
     });
 
     function isValidName(name) {
@@ -166,7 +227,7 @@ $(document).ready(function () {
     }
 });
 
-//
+///
 
 var selectedPrice;
 
