@@ -136,6 +136,8 @@ label {
     position: relative;
     width: 100%;
     display: block;
+    display: flex;
+    align-items: center;
 }
 
 .nCheckEmpty {
@@ -266,12 +268,17 @@ button {
 
     label {
         font-size: 3.8vw;
+        margin-top: 1.79rem;
+    }
+
+    label span {
+        margin-right: 10px;
     }
 
     .inputIndex1 {
         width: 84%;
         font-size: 3.8vw;
-        margin-top: 1.79rem;
+        /* margin-top: 1.79rem; */
     }
 
     .dataInfoContent h1,
