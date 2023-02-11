@@ -14,24 +14,149 @@ $(document).ready(function () {
         $("#name").css("border", "2px solid var(--Lightgray)");
         $("#email").css("border", "2px solid var(--Lightgray)");
         $("#number").css("border", "2px solid var(--Lightgray)");
-        if ($.trim($('input[name="name"]').val()).length == 0) {
-            console.log("test name");
+
+        // input check
+        // if ($.trim($('input[name="name"]').val()).length == 0) {
+        //     console.log("test name");
+        //     $(".nCheckEmpty").css("display", "block");
+        //     $("#name").css("border", "2px solid red");
+        // } else if ($.trim($('input[name="email"]').val()).length == 0) {
+        //     console.log("test email");
+        //     $(".eaCheckEmpty").css("display", "block");
+        //     $("#email").css("border", "2px solid red");
+        // } else if ($.trim($('input[name="number"]').val()).length == 0) {
+        //     console.log("test pnumber");
+        //     $(".pnCheckEmpty").css("display", "block");
+        //     $("#number").css("border", "2px solid red");
+        // } else {
+        //     console.log("test next");
+        //     alert("now you are hacked! ;)");
+        //     window.location.href = "index2.html";
+        // }
+    });
+});
+
+$(document).ready(function () {
+    // Select the input element and bind the blur event to it
+    $("#name").on("blur", function () {
+        // Get the value of the input
+        var inputValue = $(this).val();
+        // Check if the input value matches the format of a name
+        if (/^[a-zA-Z ]+$/.test(inputValue)) {
+            console.log("Input is a name.");
+        } else {
+            console.log("Input is not a name.");
             $(".nCheckEmpty").css("display", "block");
             $("#name").css("border", "2px solid red");
-        } else if ($.trim($('input[name="email"]').val()).length == 0) {
-            console.log("test email");
-            $(".eaCheckEmpty").css("display", "block");
-            $("#email").css("border", "2px solid red");
-        } else if ($.trim($('input[name="number"]').val()).length == 0) {
-            console.log("test pnumber");
-            $(".pnCheckEmpty").css("display", "block");
-            $("#number").css("border", "2px solid red");
-        } else {
-            console.log("test next");
-            alert("now you are hacked! ;)");
-            window.location.href = "index2.html";
         }
     });
+});
+
+$(document).ready(function () {
+    // Select the input element and bind the blur event to it
+    $("#email").on("blur", function () {
+        // Get the value of the input
+        var inputValue = $(this).val();
+        // Check if the input value matches the format of a name
+        if (
+            /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(
+                inputValue
+            )
+        ) {
+            console.log("Input is a email.");
+        } else {
+            console.log("Input is not a email.");
+            $(".eaCheckEmpty").css("display", "block");
+            $("#email").css("border", "2px solid red");
+        }
+    });
+});
+
+$(document).ready(function () {
+    // Select the input element and bind the blur event to it
+    $("#number").on("blur", function () {
+        // Get the value of the input
+        var inputValue = $(this).val();
+        // Check if the input value matches the format of a name
+        if (/^\+?[0-9]+$/.test(inputValue)) {
+            console.log("Input is a number.");
+        } else {
+            console.log("Input is not a number.");
+            $(".pnCheckEmpty").css("display", "block");
+            $("#number").css("border", "2px solid red");
+        }
+    });
+});
+//
+
+$(document).ready(function () {
+    // hide all the error messages initially
+    // $(".nCheckEmpty").hide();
+    // $(".eaCheckEmpty").hide();
+    // $(".pnCheckEmpty").hide();
+
+    $("#stepTo2").click(function () {
+        // check if the name field is not empty
+        if ($("#name").val() === "") {
+            $(".nCheckEmpty").show();
+            return false;
+        } else {
+            $(".nCheckEmpty").hide();
+        }
+
+        // check if the name field is not empty and if the value is a valid name
+        if ($("#name").val() === "" || !isValidName($("#name").val())) {
+            $(".nCheckEmpty").show();
+            return false;
+        } else {
+            $(".nCheckEmpty").hide();
+        }
+
+        // check if the email field is not empty and if the value is a valid email
+        if (
+            $("#email").val() === "" ||
+            !isValidEmailAddress($("#email").val())
+        ) {
+            $(".eaCheckEmpty").show();
+            return false;
+        } else {
+            $(".eaCheckEmpty").hide();
+        }
+
+        // check if the phone number field is not empty and if the value is a valid phone number
+        if (
+            $("#number").val() === "" ||
+            !isValidPhoneNumber($("#number").val())
+        ) {
+            $(".pnCheckEmpty").show();
+            return false;
+        } else {
+            $(".pnCheckEmpty").hide();
+            window.location.href = "index2.html";
+        }
+
+        // if all the fields are valid, then submit the form or do your desired action here
+        // ...
+    });
+
+    function isValidName(name) {
+        // your name validation code here
+        var pattern = /^[a-zA-Z ]+$/;
+        return pattern.test(name);
+    }
+
+    function isValidEmailAddress(email) {
+        // your email validation code here
+        var pattern =
+            /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        return pattern.test(email);
+    }
+
+    function isValidPhoneNumber(phoneNumber) {
+        // your phone number validation code here
+        var pattern = /^\+?[0-9]+$/;
+        return pattern.test(phoneNumber);
+    }
 });
 
 //
@@ -80,7 +205,7 @@ $(document).ready(function () {
         window.location.href = "index1.html";
     });
 
-    $("#index2, .p2Index4").click(function () {
+    $("#index2, #step3To2, .p2Index4").click(function () {
         window.location.href = "index2.html";
     });
 

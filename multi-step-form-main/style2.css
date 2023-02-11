@@ -34,7 +34,7 @@ body {
     background-color: rgb(255, 255, 255);
     border: 2px solid var(--Coolgray);
     border-radius: 10px;
-    padding: 1.2rem;
+    padding: 1rem;
     cursor: pointer;
 }
 
@@ -45,7 +45,7 @@ body {
 
 .planImg {
     width: 60px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .planImgText {
@@ -67,7 +67,7 @@ body {
     background-color: var(--Alabaster);
     border-radius: 7px;
     /* aspect-ratio: 100/9; */
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .toggleMthYr .p1 {
