@@ -271,7 +271,9 @@ button {
         margin-top: 1.79rem;
     }
 
-    label span {
+    .nCheckEmpty,
+    .eaCheckEmpty,
+    .pnCheckEmpty {
         margin-right: 10px;
     }
 

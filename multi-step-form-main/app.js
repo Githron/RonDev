@@ -170,7 +170,7 @@ $(document).ready(function () {
 // perfect !
 $(document).ready(function () {
     // hide all the error messages initially
-    $(".error").hide();
+    // $(".error").hide();
 
     $("#stepTo2").click(function () {
         let isFormValid = true;
