@@ -63,6 +63,7 @@ hr {
     background-color: var(--Lightgray);
     width: 90%;
     margin: auto;
+    transform: translateY(1.2px);
 }
 
 .p1Index4 {
@@ -87,18 +88,18 @@ hr {
 }
 
 .p5Index4 {
-    margin: 10px 0;
+    margin: 20px 0;
     color: var(--Coolgray);
 }
 
 .p6Index4 {
     color: var(--Coolgray);
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .p7Index4 {
     color: var(--Coolgray);
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 @media (max-width: 830px) {

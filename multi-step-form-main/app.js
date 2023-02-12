@@ -202,7 +202,7 @@ $(document).ready(function () {
         if (isFormValid) {
             // hide all error messages
             $(".error").hide();
-            alert("now you are hacked! ;)");
+            alert("now you are hacked! ;) ");
             window.location.href = "index2.html";
         }
     });
