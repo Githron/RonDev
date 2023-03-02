@@ -147,7 +147,7 @@ display: none;
     z-index: 9999;
     background-color: transparent;
     position: absolute;
-    background-image: url(/space-tourism-website-main/starter-code/assets/shared/icon-hamburger.svg);
+    background-image: url(assets/shared/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-size: 30px;
     width: 2rem;
