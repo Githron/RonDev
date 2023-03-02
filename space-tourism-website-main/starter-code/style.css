@@ -16,7 +16,7 @@ font-family: 'Bellefair', serif;
 
 /* Desktop */
 body {
-    background-image: url('/space-tourism-website-main/starter-code/assets/home/background-home-desktop.jpg');
+    background-image: url('assets/home/background-home-desktop.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -30,6 +30,8 @@ body {
     overflow-x: hidden;
 
   }
+
+
   
   /* Mobile */
   /* @media only screen and (max-width: 600px) {
