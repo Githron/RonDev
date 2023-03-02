@@ -1,0 +1,179 @@
+/* 
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Bellefair&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+
+/* Desktop */
+body {
+    background-image: url('/space-tourism-website-main/starter-code/assets/home/background-home-desktop.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh;
+    line-height: 1.5;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
+
+  }
+  
+  /* Mobile */
+  /* @media only screen and (max-width: 600px) {
+    body {
+      background-image: url('/space-tourism-website-main/starter-code/assets/home/background-home-mobile.jpg');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  } */
+  
+  /* Laptop */
+  /* @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+      background-image: url('/space-tourism-website-main/starter-code/assets/home/background-home-tablet.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  } */
+  
+
+.primHeadr{
+    /* width: 100%;  */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.logo{
+  margin: 2rem;
+  width: 40px;
+}
+
+.mobNavTogl{
+  display: none;
+}
+
+.primNav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    background: hsl(0 0% 0% / 0.5);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primNav{
+    background: hsl(0 0% 100% / 0.1);
+    /* less # less blur */
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.primNav a{
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.primNav a > [aria-hidden="true"] {
+  font-weight: 700;
+  margin-inline-end: .75em;
+}
+
+.flex{
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid{
+display: grid;
+gap: var(--gap, 1rem);
+}
+
+.d-block{
+display: block;
+}
+
+.sr-only{
+display: none;
+}
+
+
+/* mobile */
+@media (max-width: 35em) {
+
+  body{
+    background-image: url(assets/home/background-home-mobile.jpg);
+  }
+  .primNav{
+    --gap: 2em;
+
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-in;
+  }
+
+  .primNav[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobNavTogl{
+    display: block;
+    z-index: 9999;
+    background-color: transparent;
+    position: absolute;
+    background-image: url(/space-tourism-website-main/starter-code/assets/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2.5rem;
+    right: 2rem;
+  }
+
+  .mobNavTogl[aria-expanded="true"] {
+    background-image: url(assets/shared/icon-close.svg);
+  }
+}
+
+/* tablet */
+@media (min-width:35em) and (max-width:55em) {
+  .primNav a > [aria-hidden="true"] {
+    display: none;
+  }
+} 
+
+@media (min-width:35em) {
+  .primNav{
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 1rem;
+    padding-inline: clamp(3rem, 10vw, 10rem);
+    padding-right: 2rem;
+  }
+}
+
+

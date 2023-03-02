@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Display JSON data in HTML</title>
+    <!-- <script>
+        // Define the function to retrieve and display the JSON data
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                // code to display data goes here
+                const destinations = data.destinations;
+                const destinationsContainer = document.getElementById('destinations');
+
+                for (let i = 0; i < destinations.length; i++) {
+                    const destination = destinations[i];
+                    const name = destination.name;
+                    const image = destination.images.png;
+                    const description = destination.description;
+                    const distance = destination.distance;
+                    const travel = destination.travel;
+
+                    const destinationDiv = document.createElement('div');
+                    destinationDiv.innerHTML = `
+    <h2>${name}</h2>
+    <img src="${image}" alt="${name}">
+    <p>${description}</p>
+    <p>Distance: ${distance}</p>
+    <p>Travel time: ${travel}</p>
+  `;
+                    destinationsContainer.appendChild(destinationDiv);
+                }
+
+            });
+
+    </script> -->
+
+
+    <!-- JavaScript for loop explained
+
+
+    
+        Explain this pls for (let i = 0; i < destinations.length; i++) 
+    
+        The code you provided is written in JavaScript and is
+        using a for loop to iterate through an array called destinations. Here is a breakdown of what is happening in
+        this line of code: for keyword is used to start a loop that will iterate through the array. let i=0 initializes
+        a variable called i to zero, which will be used as the loop counter. i < destinations.length sets a condition
+        for the loop to continue as long as the value of i is less than the length of the destinations array. i++ is
+        shorthand for incrementing the value of i by 1 after each iteration of the loop. This ensures that the loop will
+        eventually exit and not run infinitely. So in summary, this line of code initializes a loop that will iterate
+        through the destinations array, starting at the first element and continuing until the last element has been
+        reached. During each iteration of the loop, the value of i will be incremented by 1, allowing the loop to move
+        on to the next element in the array.  -->
+
+    <script>
+        // Define the async function to retrieve and display the JSON data
+        const fetchData = async () => {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+
+                const destinations = data.destinations;
+                const destinationsContainer = document.getElementById('destinations');
+
+                for (let i = 0; i < destinations.length; i++) {
+                    const destination = destinations[i];
+                    const name = destination.name;
+                    const image = destination.images.png;
+                    const description = destination.description;
+                    const distance = destination.distance;
+                    const travel = destination.travel;
+                    const destinationDiv = document.createElement('div');
+                    destinationDiv.innerHTML = ` 
+                    <h2>${name}</h2>
+                    <img src="${image}" alt="${name}">
+                    <p>${description}</p>
+                    <p>Distance: ${distance}</p>
+                    <p>Travel time: ${travel}</p>
+                    `;
+                    destinationsContainer.appendChild(destinationDiv);
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        fetchData();
+    </script>
+
+</head>
+
+<body>
+
+    <div id="destinations"></div>
+
+</body>
+
+</html>
