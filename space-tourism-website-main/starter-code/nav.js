@@ -18,3 +18,25 @@ mobNavTogl.addEventListener("click", () => {
         console.log("visibility='false'");
     }
 });
+
+
+// jQuery link distination nav
+$(document).ready(function () {
+    $("#moon").click(function () {
+        window.location.href =
+            "destination-moon.html";
+    });
+
+    $("#mars").click(function () {
+        window.location.href = "destination-mars.html";
+    });
+
+    $("#europa").click(function () {
+        window.location.href =
+            "destination-europa.html";
+    });
+
+    $("#titan").click(function () {
+        window.location.href = "destination-titan.html";
+    });
+});

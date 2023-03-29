@@ -7,7 +7,7 @@
 
 	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 	<link rel="stylesheet" href="style.css">
-	
+
 	<title>Frontend Mentor | Space tourism website</title>
 
 	<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
@@ -38,19 +38,19 @@
 
 
 				<li class="active">
-					<a href="index.html">
+					<a href="destination-moon.html">
 						<span aria-hidden="true">01</span>Destination
 					</a>
 
 
 				<li class="active">
-					<a href="index.html">
+					<a href="crew-commander.html">
 						<span aria-hidden="true">02</span>Crew
 					</a>
 
 
 				<li class="active">
-					<a href="index.html">
+					<a href="technology-vehicle.html">
 						<span aria-hidden="true">03</span>Technology
 					</a>
 
@@ -58,6 +58,31 @@
 		</nav>
 
 	</header>
+
+	<main class="home-main">
+		<div class="home-content-div1">
+			<div class="home-t1">
+				So, you want to travel to
+			</div>
+	
+			<div class="title1">
+				Space
+			</div>
+	
+			<div class="home-p1">
+				Let’s face it; if you want to go to space, you might as well genuinely go to
+				outer space and not hover kind of on the edge of it. Well sit back, and relax
+				because we’ll give you a truly out of this world experience!
+			</div>
+		</div>
+
+		<div class="div2">
+			<div class="circle">
+				<span class="centerText">EXPLORE</span>
+			  </div>
+		</div>
+
+	</main>
 
 
 
@@ -71,15 +96,25 @@
 
 	<!-- 
 
-	So, you want to travel to
-	Space X
-	Let’s face it; if you want to go to space, you might as well genuinely go to
-	outer space and not hover kind of on the edge of it. Well sit back, and relax
-	because we’ll give you a truly out of this world experience!
-
-	Explore
+	
+	 X
+	
 
 	 -->
+
+	<script>
+		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		let vh = window.innerHeight * 0.01;
+		// Then we set the value in the --vh custom property to the root of the document
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+		// We listen to the resize event
+		window.addEventListener('resize', () => {
+			// We execute the same script as before
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+	</script>
 </body>
 
 </html>

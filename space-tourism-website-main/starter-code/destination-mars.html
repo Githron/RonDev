@@ -1,16 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Space tourism website</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+  <link rel="stylesheet" href="style-moon.css">
+
 </head>
+
 <body>
 
-  00 Home
+  <header class="primHeadr">
+
+    <div>
+      <img class="logo" src="assets/shared/logo.svg" alt="">
+    </div>
+
+    <button class="mobNavTogl" aria-controls="primNav" aria-expanded="false">
+
+      <span class="sr-only">Menu</span>
+
+    </button>
+
+    <nav>
+      <ul id="primNav" data-visible="false" class="primNav flex">
+        <li class="active">
+          <a href="index.html">
+            <span aria-hidden="true">00</span>Home
+          </a>
+
+
+        <li class="active">
+          <a href="destination-moon.html">
+            <span aria-hidden="true">01</span>Destination
+          </a>
+
+
+        <li class="active">
+          <a href="crew-commander.html">
+            <span aria-hidden="true">02</span>Crew
+          </a>
+
+
+        <li class="active">
+          <a href="technology-vehicle.html">
+            <span aria-hidden="true">03</span>Technology
+          </a>
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <div class="moonContainer">
+
+    <div class="content-moon">
+      <div class="moonNavTitle">
+        <span class="zeroOne">01</span> Pick your destination
+      </div>
+
+      <div class="moonImg">
+        <img src="./assets/destination/image-mars.png" alt="">
+      </div>
+    </div>
+
+
+
+    <div class="moonDiv2">
+      <div class="moonNav">
+        <div id="moon" class="moonLi">Moon</div>
+        <div id="mars" class="moonLi focus">Mars</div>
+        <div id="europa" class="moonLi">Europa</div>
+        <div id="titan" class="moonLi">Titan</div>
+      </div>
+
+      <div class="moonh1">
+        MARS
+      </div>
+
+      <div class="moonPar">
+        Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
+        the tallest planetary mountain in our solar system. It’s two and a half times
+        the size of Everest!
+      </div>
+
+
+
+      <hr class="moonhr">
+
+      <div class="botDetail">
+        <div class="avrDistContainer">
+          <div class="avrDistance">
+            Avg. distance
+          </div>
+
+          <div class="avrDistanceNum">
+            225 mil. km
+          </div>
+        </div>
+
+        <div class="travelTimeCont">
+          <div class="travelTime">
+            Est. travel time
+          </div>
+
+          <div class="travelTimeNum">
+            9 months
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  </script>
+</body>
+
+</html>
+
+<!-- 00 Home
   01 Destination
   02 Crew
   03 Technology
@@ -22,16 +160,12 @@
   Europa
   Titan
 
-  Mars
+  
 
-  Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
-  the tallest planetary mountain in our solar system. It’s two and a half times 
-  the size of Everest!
+  
 
   Avg. distance
-  225 mil. km
+  
 
   Est. travel time
-  9 months
-</body>
-</html>
+   -->

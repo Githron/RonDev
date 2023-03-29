@@ -1,0 +1,268 @@
+
+
+/* 
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif;
+*/
+
+/* Desktop */
+body {
+    background-image: url('assets/destination/background-destination-desktop.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh;
+
+    line-height: 1.5;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    overflow-x: hidden;
+  }
+
+  .moonContainer{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+  }
+
+  .moonNav{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    /* font-size: .7rem; */
+    text-transform: uppercase;
+  }
+
+  .content-moon{
+    flex: 1;
+    display: block;
+  }
+
+  .moonDiv2{
+    flex: 1;
+  }
+
+
+  .moonNavTitle{
+    text-align: left;
+    margin-left: 5rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .zeroOne{
+    font-weight: 700;
+    color: grey;
+  }
+
+  .moonImg{
+    width: 240px;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .moonImg img{
+    width: 100%;
+  }
+
+  .moonLi{
+    color: #d0d6f9;
+    padding-bottom: 10px;
+    border-bottom: 3.5px solid transparent;
+    cursor: pointer;
+  }
+
+  .moonLi.focus{
+    color: white;
+    border-bottom: 3.5px solid white;
+  }
+
+  .moonh1{
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 4rem;
+    font-family: 'Bellefair', serif;
+  }
+
+  .moonPar{
+    margin: 0 2rem;
+    margin-left: 0;
+    margin-right: 4rem;
+    color: #d0d6f9;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .moonhr{
+    width: 85%;
+    margin-left: 0;
+    opacity: .2;
+    border: none;
+    background-color: #d0d6f9;
+    height: 2px;
+  }
+
+  .botDetail{
+    display: flex;
+    column-gap: 2rem;
+  }
+
+  .avrDistance{
+    text-transform: uppercase;
+    color: #d0d6f9;
+    margin: 2rem 0;
+    margin-bottom: .5rem;
+  }
+
+  .avrDistanceNum{
+    font-family: 'Bellefair', serif;
+    font-size: 2rem;
+  }
+
+  .travelTime{
+    text-transform: uppercase;
+    color: #d0d6f9;
+    margin: 2rem 0;
+    margin-bottom: .5rem;
+  }
+
+  .travelTimeNum{
+    font-family: 'Bellefair', serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+
+
+  /*  mobile */
+@media (max-width: 35em) {
+
+    body{
+        background-image: url(assets/destination/background-destination-mobile.jpg);
+        min-height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+        min-height: calc(var(--vh, 1vh) * 100);
+      }
+
+      .moonContainer{
+        text-align: center;
+        flex-direction: column;
+      }
+    
+
+      .moonNavTitle{
+        margin-left: auto;
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-top: auto;
+      }
+
+      
+
+      .moonNav{
+        display: flex;
+        flex-direction: row;
+        width: 65%;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .moonh1{
+        text-align: center;
+        /* margin-top: 1rem;
+        font-size: 4rem;
+        font-family: 'Bellefair', serif; */
+      }
+
+      .moonPar{
+        text-align: center;
+        margin-right: 2rem;
+        margin-left: 2rem;
+      }
+
+      
+
+      .moonhr{
+        margin-left: auto;
+        margin: auto;
+        width: 85%;
+        opacity: .2;
+        border: none;
+        background-color: #d0d6f9;
+        height: 2px;
+      }
+
+      .botDetail{
+        display: block;
+      }
+
+      .avrDistance{
+        text-transform: uppercase;
+        color: #d0d6f9;
+        margin: 2rem 0;
+        margin-bottom: .5rem;
+      }
+
+      .avrDistanceNum{
+        font-family: 'Bellefair', serif;
+        font-size: 2rem;
+      }
+
+      .travelTime{
+        text-transform: uppercase;
+        color: #d0d6f9;
+        margin: 2rem 0;
+        margin-bottom: .5rem;
+      }
+
+      .travelTimeNum{
+        font-family: 'Bellefair', serif;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+}
+
+/* pc 1300 */
+@media (min-width: 1300px) {
+
+  .content-moon{
+    flex: 1.5;
+  }
+  .moonNavTitle{
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .moonImg{
+    width: 500px;
+  }
+
+  .moonDiv2{
+    margin-right: 5rem;
+    margin-top: 4rem;
+  }
+
+  .moonNav{
+    font-size: 18px;
+  }
+
+  .moonh1{
+    font-size: 8rem;
+  }
+
+  .moonPar{
+    font-size: 1.4rem;
+  }
+
+
+}
