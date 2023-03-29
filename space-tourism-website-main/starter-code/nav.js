@@ -39,4 +39,14 @@ $(document).ready(function () {
     $("#titan").click(function () {
         window.location.href = "destination-titan.html";
     });
+
+    $(".circle").click(function () {
+        window.location.href = "destination-moon.html";
+    });
+
+    $(".logo").click(function () {
+        window.location.href = "index.html";
+    });
 });
+
+
