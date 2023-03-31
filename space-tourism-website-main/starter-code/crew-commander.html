@@ -1,27 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="stylesheet" href="style-crew.css">
+
+	<title>Frontend Mentor | Space tourism website</title>
+
+	<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js'></script>
+
+	<script src="nav.js" defer></script>
+
+
 </head>
-<body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+<body class="home">
 
-  02 Meet your crew
+	<header class="primHeadr">
 
-  Commander
-  Douglas Hurley
+		<div>
+			<img class="logo" src="assets/shared/logo.svg" alt="">
+		</div>
 
-  Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-  and former NASA astronaut. He launched into space for the third time as 
-  commander of Crew Dragon Demo-2.
+		<button class="mobNavTogl" aria-controls="primNav" aria-expanded="false">
+
+			<span class="sr-only">Menu</span>
+
+		</button>
+
+		<nav>
+			<ul id="primNav" data-visible="false" class="primNav flex">
+				<li class="active">
+					<a href="index.html">
+						<span aria-hidden="true">00</span>Home
+					</a>
+
+
+				<li class="active">
+					<a href="destination-moon.html">
+						<span aria-hidden="true">01</span>Destination
+					</a>
+
+
+				<li class="active">
+					<a href="crew-commander.html">
+						<span aria-hidden="true">02</span>Crew
+					</a>
+
+
+				<li class="active">
+					<a href="technology-vehicle.html">
+						<span aria-hidden="true">03</span>Technology
+					</a>
+
+			</ul>
+		</nav>
+
+	</header>
+
+	<div class="crewMain">
+
+	</div>
+
+
+
+	<script>
+		$(document).ready(function () {
+			var data;
+			var index = 0;
+
+			$.getJSON("data.json", function (json) {
+				data = json.crew;
+				displayData();
+			});
+
+			$(document).on("click", ".page1", function () {
+				index = data.findIndex(obj => obj.name === 'Douglas Hurley');
+				console.log(data[index].name)
+				console.log(index)
+				displayData();
+			});
+
+
+			$(document).on("click", ".page2", function () {
+				index = data.findIndex(obj => obj.name === 'Mark Shuttleworth');
+				displayData();
+			});
+
+			$(document).on("click", ".page3", function () {
+				index = data.findIndex(obj => obj.name === 'Victor Glover');
+				displayData();
+			});
+
+			$(document).on("click", ".page4", function () {
+				index = data.findIndex(obj => obj.name === 'Anousheh Ansari');
+				displayData();
+			});
+
+
+
+
+			// TEST NEXT BUTTOM
+			$(document).on("click", "#nextButton", function () {
+				index = (index + 1) % data.length;
+				console.log("img clicked")
+				displayData();
+			});
+
+			function displayData() {
+				var obj = data[index];
+				var html = `
+					<div class="crewDiv1">
+						<div class="crewTitleNav">
+							<span class="zeroTwo">02</span> MEET YOUR CREW
+						</div>
+						<div id="nextButton" class="crewImg">
+							<img src="${obj.images.png}" alt="">
+						</div>
+
+						<div class="paginateWrap">
+							<div class="page1"></div>
+							<div class="page2"></div>
+							<div class="page3"></div>
+							<div class="page4"></div>
+						</div>
+
+
+					</div>
+					<div class="crewDiv2">
+						<div class="crewRole">${obj.role}</div>
+						<div class="crewname">${obj.name}</div>
+						<div class="crewPar">
+							${obj.bio}
+						</div>
+					</div>
+					`;
+				$(".crewMain").html(html);  // #dataDisplay is the selector
+
+				// animate when changing data's
+				$(".crewMain").css("visibility", "hidden").animate({
+					opacity: 0,
+					marginTop: "-50px"
+				}, 500, function () {
+					// your existing code
+					$(this).css("visibility", "visible").animate({
+						opacity: 1,
+						marginTop: "0px"
+					}, 1000);
+				});
+
+				//  SWIPE TRIGGER
+				$(document).ready(function () {
+					var selector = $(".crewDiv1"); // Replace with your dynamic selector
+					var hammertime = new Hammer($(selector)[0]);
+					hammertime.on('swipeleft', function () {
+						index = (index + 1) % data.length;
+						displayData();
+					});
+					hammertime.on('swiperight', function () {
+						index = (index - 1 + data.length) % data.length;
+						displayData();
+					});
+				});
+
+				if (data[index].name === "Douglas Hurley") {
+					$(".page1").css("background-color", "white");
+				} else if (index === 1) {
+					$(".page2").css("background-color", "white");
+				} else if (index === 2) {
+					$(".page3").css("background-color", "white");
+				} else if (index === 3) {
+					$(".page4").css("background-color", "white");
+				}
+
+				// no need below
+				// else {
+				// 	$(".page1").css("background-color", "grey"); // reset to default if not Douglas Hurley
+				// }
+
+			}
+		});
+	</script>
+
+<script>
+	// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+	let vh = window.innerHeight * 0.01;
+	// Then we set the value in the --vh custom property to the root of the document
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+	// We listen to the resize event
+	window.addEventListener('resize', () => {
+		// We execute the same script as before
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
+</script>
+
+
 </body>
+
 </html>
