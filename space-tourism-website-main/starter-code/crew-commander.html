@@ -117,6 +117,7 @@
 			function displayData() {
 				var obj = data[index];
 				var html = `
+				
 					<div class="crewDiv1">
 						<div class="crewTitleNav">
 							<span class="zeroTwo">02</span> MEET YOUR CREW
@@ -131,10 +132,14 @@
 							<div class="page3"></div>
 							<div class="page4"></div>
 						</div>
-
-
 					</div>
+
 					<div class="crewDiv2">
+
+						<div class="crewTitleNav2">
+							<span class="zeroTwo">02</span> MEET YOUR CREW
+						</div>
+
 						<div class="crewRole">${obj.role}</div>
 						<div class="crewname">${obj.name}</div>
 						<div class="crewPar">
@@ -142,6 +147,8 @@
 						</div>
 					</div>
 					`;
+
+				
 				$(".crewMain").html(html);  // #dataDisplay is the selector
 
 				// animate when changing data's

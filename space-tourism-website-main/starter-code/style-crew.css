@@ -28,7 +28,6 @@ body {
     overflow-x: hidden;
 }
 
-
 .crewMain {
     z-index: 99;
     display: flex;
@@ -52,6 +51,10 @@ body {
     margin-bottom: 2rem;
     margin-top: auto;
     font-size: 1.1rem;
+}
+
+.crewTitleNav2 {
+    display: none;
 }
 
 .zeroTwo {
@@ -104,7 +107,7 @@ body {
 }
 
 .crewRole {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
     color: grey;
     font-family: "Bellefair", serif;
@@ -122,4 +125,54 @@ body {
     margin: 0 2rem;
     color: #d0d6f9;
     font-size: 1.1rem;
+}
+
+/*  desktop */
+@media (min-width: 35em) {
+    .crewMain {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: start;
+        padding-top: 2rem;
+        height: 100vh;
+    }
+
+    .crewDiv1 {
+        position: relative;
+        height: 100%;
+    }
+
+    .crewDiv2 {
+        text-align: left;
+        margin-left: 5rem;
+        height: 100%;
+    }
+
+    .crewPar {
+        margin-left: 0;
+    }
+
+    .crewTitleNav2 {
+        display: block;
+        margin-bottom: 3rem;
+    }
+
+    .crewTitleNav {
+        display: none;
+    }
+
+    .paginateWrap {
+        display: none;
+    }
+
+    .crewImg {
+        position: absolute;
+        border-bottom: none;
+        bottom: 0px;
+        margin-bottom: 0;
+        height: 90%;
+        width: auto;
+
+
+    }
 }

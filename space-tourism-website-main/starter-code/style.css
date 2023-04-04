@@ -153,6 +153,7 @@ body {
     margin: 0;
 
     background: hsl(0 0% 0% / 0.5);
+    z-index: 999;
 }
 
 @supports (backdrop-filter: blur(1rem)) {
