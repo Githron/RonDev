@@ -1,0 +1,103 @@
+/* 
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif;
+*/
+
+img {
+  width: 100%;
+}
+/* mobile first */
+
+body {
+  background-image: url("assets/technology/background-technology-mobile.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+
+  min-height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
+
+  line-height: 1.5;
+  /* 
+    display: grid;
+    grid-template-rows: min-content 1fr; */
+
+  overflow-x: hidden;
+}
+
+.techNavTitle {
+  text-transform: uppercase;
+  margin-left: auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: auto;
+  font-size: 1.1rem;
+}
+
+.zeroThree {
+  font-weight: 700;
+  color: grey;
+}
+
+.circleTech {
+  margin: auto;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #12131e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 1rem;
+  cursor: pointer;
+}
+
+.centerText {
+  color: white;
+}
+
+.centerText.focusT {
+  color: #12131e;
+}
+
+.focusT {
+  background-color: white;
+}
+
+.circCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.term {
+  margin: 0 2rem;
+  color: #d0d6f9;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.vehicle {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.techPar {
+  margin: 0 2rem;
+  color: #d0d6f9;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* landscaoe view */
+@media (min-width: 35em) {
+    
+}

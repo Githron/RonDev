@@ -90,6 +90,10 @@ body {
     /* background-color: #d0d6f9; */
 }
 
+.paginateWrap.desk{
+    display: none;
+}
+
 .paginateWrap div {
     width: 12px;
     height: 12px;
@@ -127,7 +131,7 @@ body {
     font-size: 1.1rem;
 }
 
-/*  desktop */
+/*  landscape */
 @media (min-width: 35em) {
     .crewMain {
         display: flex;
@@ -140,12 +144,14 @@ body {
     .crewDiv1 {
         position: relative;
         height: 100%;
+        flex: .8;
     }
 
     .crewDiv2 {
         text-align: left;
         margin-left: 5rem;
         height: 100%;
+        flex: 1.2;
     }
 
     .crewPar {
@@ -161,18 +167,63 @@ body {
         display: none;
     }
 
-    .paginateWrap {
+    .paginateWrap.mob {
         display: none;
+    }
+
+    .paginateWrap.desk{
+        display: flex;
+        margin-left: 0;
     }
 
     .crewImg {
         position: absolute;
         border-bottom: none;
-        bottom: 0px;
         margin-bottom: 0;
         height: 90%;
         width: auto;
+        bottom: 0px;
+    }
+}
 
 
+
+/* pc 1300 */
+@media (min-width: 1300px) {
+
+    .crewMain{
+        height: 89vh;
+    }
+
+    .crewTitleNav2{
+        font-size: 2.8rem;
+        margin-bottom: 7rem;
+    }
+
+    .crewPar{
+        font-size: 1.4rem;
+        width: 90%;
+        margin-bottom: 7rem;
+    }
+
+    .crewRole{
+        font-size: 2.8rem;
+    }
+
+    .crewname{
+        font-size: 4rem;
+    }
+
+    .crewDiv1{
+        flex: 1;
+        height: 100%;
+    }
+
+    .crewDiv2{
+        flex: 1;
+    }
+
+    .crewImg{
+        height: 80%;
     }
 }

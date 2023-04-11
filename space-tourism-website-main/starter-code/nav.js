@@ -47,6 +47,18 @@ $(document).ready(function () {
     $(".logo").click(function () {
         window.location.href = "index.html";
     });
+
+    $("#vehicle").click(function () {
+        window.location.href = "technology-vehicle.html";
+    });
+
+    $("#spaceport").click(function () {
+        window.location.href = "technology-spaceport.html";
+    });
+
+    $("#capsule").click(function () {
+        window.location.href = "technology-capsule.html";
+    });
 });
 
 
