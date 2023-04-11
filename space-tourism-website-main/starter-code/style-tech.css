@@ -99,5 +99,79 @@ body {
 
 /* landscaoe view */
 @media (min-width: 35em) {
-    
+
+    body{
+        background-image: url("assets/technology/background-technology-desktop.jpg");
+    }
+
+    .techNavTitle{
+        margin-top: 2rem;
+        margin-left: 5rem;
+        text-align: left;
+    }
+    .techMain{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .techContent{
+        width: 60vw;
+
+        /* as container */
+        display: flex;
+        flex-direction: row;
+    }
+
+    .techImg{
+        width: 40vw;
+        position: relative;
+    }
+
+    .circCon{
+        flex-direction: column;
+    }
+
+    .circleTech{
+        margin-left: 5rem;
+    }
+
+    .term, .vehicle, .techPar{
+        text-align: left;
+        margin-right: 0;
+    }
+
+    .vehicle{
+        margin-left: 2rem;
+    }
+
+    .techPar{
+        margin-bottom: 2rem;
+    }
+}
+
+/* pc view 1300 */
+/* pc 1300 */
+@media (min-width: 1300px) {
+    .techNavTitle{
+        font-size: 2.8rem;
+        margin-bottom: 7rem;
+    }
+
+    .vehicle{
+        font-size: 4rem;
+    }
+
+    .techPar{
+        font-size: 1.4rem;
+    }
+
+    .term{
+        font-size: 1.6rem;
+    }
+
+    .circleTech{
+        width: 80px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
 }

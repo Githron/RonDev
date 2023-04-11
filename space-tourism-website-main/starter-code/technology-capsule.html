@@ -16,11 +16,23 @@
 
     <title>Frontend Mentor | Space tourism website</title>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 
     <script src="nav.js" defer></script>
+
+    <style>
+      @media (min-width: 35em) {
+        .techImg img {
+          content: url("assets/technology/image-space-capsule-portrait.jpg");
+          width: 80%;
+          position: absolute;
+          right: 0;
+          /* bottom: 30px; */
+        }
+      }
+    </style>
   </head>
 
   <body class="home">
@@ -61,36 +73,43 @@
     </header>
 
     <div class="techNavTitle">
-      <span class="zeroThree">02</span> Space launch 101
+      <span class="zeroThree">03</span> Space launch 101
     </div>
 
-    <div class="techImg">
-      <img src="assets/technology/image-space-capsule-landscape.jpg" alt="" />
-    </div>
-
-    <div class="circCon">
-      <div id="vehicle" class="circleTech">
-        <span class="centerText">1</span>
+    <div class="techMain">
+      <div class="techImg">
+        <img src="assets/technology/image-space-capsule-landscape.jpg" alt="" />
       </div>
 
-      <div id="spaceport" class="circleTech">
-        <span class="centerText">2</span>
+      <div class="techContent">
+        <div class="circCon">
+          <div id="vehicle" class="circleTech">
+            <span class="centerText">1</span>
+          </div>
+
+          <div id="spaceport" class="circleTech">
+            <span class="centerText">2</span>
+          </div>
+
+          <div id="capsule" class="circleTech focusT">
+            <span class="centerText focusT">3</span>
+          </div>
+        </div>
+
+        <div class="techCon">
+          <div class="term">The terminology...</div>
+
+          <div class="vehicle">Space capsule</div>
+
+          <div class="techPar">
+            A space capsule is an often-crewed spacecraft that uses a blunt-body
+            reentry capsule to reenter the Earth's atmosphere without wings. Our
+            capsule is where you'll spend your time during the flight. It
+            includes a space gym, cinema, and plenty of other activities to keep
+            you entertained.
+          </div>
+        </div>
       </div>
-
-      <div id="capsule" class="circleTech focusT">
-        <span class="centerText focusT">3</span>
-      </div>
-    </div>
-
-    <div class="term">The terminology...</div>
-
-    <div class="vehicle">Space capsule</div>
-
-    <div class="techPar">
-      A space capsule is an often-crewed spacecraft that uses a blunt-body
-      reentry capsule to reenter the Earth's atmosphere without wings. Our
-      capsule is where you'll spend your time during the flight. It includes a
-      space gym, cinema, and plenty of other activities to keep you entertained.
     </div>
   </body>
 </html>
